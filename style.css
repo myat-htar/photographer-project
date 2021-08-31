@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(195, 188, 188);
+    
+}
+.nav-bar{
+    /* position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    align-self: flex-start; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: gray;
+    padding: 0.6rem;
+}
+.logo{
+    font-size: 2.5rem;
+    font-family: 'Besley', serif;
+    position: relative;
+    color: navy;
+}
+.menu{
+    list-style: none;
+}
+li{ 
+    float: left;
+}
+li a{
+    font-family: 'Besley', serif;
+    font-size: 1.5rem;
+    color: navy;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 20px;
+    transition: transform 0.3s ease;
+}
+li a:hover, li a:link:active{
+    outline: navy;
+    /* border: 2px solid navy; */
+    color: white;
+    transform: scale(1.1);
+}
+.nav-bar i{
+    font-size: 48px;
+}
+.icon{
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    opacity: 0;
+    color: white;
+}
+.toggle{
+    display: none;
+    /* position: absolute;
+    top: 5rem; */
+    width: 100%;
+    text-align: center;
+    background-color: gray;
+}
+.toggle p{
+    font-size: 1.5rem;
+    color: navy;
+    transition: transform 0.3s ease;
+}
+.toggle a{
+    text-decoration: none;
+}
+.toggle p:hover{
+    background-color: navy;
+    color: white;
+    transform: scale(1.1);
+}
+/* Home */
+.home{
+    position: relative;
+    width: 100%;
+    margin-bottom: 7rem;
+}
+.home h3{
+    font-family: 'Besley', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.home img{
+    opacity: 0.7;
+}
+
+/* Photos */
+#about h2, #photos h2, #contact h2{
+    margin-bottom: 4rem;
+    text-align: center;
+    color: navy;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+#photo-album {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 7rem;
+}
+#photo-album a{
+    display: inline;
+}
+#photo-album button{
+    background-color: navy;
+    border: 2px solid navy;
+    color: white;
+    outline: none;
+    font-size: 1.1rem;
+    padding: 20px 50px;
+}
+#photo-album button:hover{
+    background-color: rgb(55, 55, 241);
+}
+#photo-album button:active{
+    border: 2px solid rgb(55, 55, 241);
+}
+
+/* about me */
+#about{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 7rem;
+}
+.profile{
+    width: 20%;
+    float: left; 
+}
+.profile img{
+    border: 1px solid gray;
+    margin-bottom: 7rem;
+}
+.info{
+    width: 80%;
+    float: left;
+    padding-left: 40px;
+    text-align: justify;
+}
+.info ul{
+    list-style-type:square;
+}
+/* contact */
+#contact{
+    clear: both;
+    width: 100%;
+}
+.contact-icon{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: navy;
+}
+.contact-icon i{
+    font-size: 36px;
+}
+footer{
+    text-align: center;
+    background-color: gray;
+    color: navy;
+    line-height: 70px;
+}
+
+.up i{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 4rem;
+    color: navy;
+}
+@media screen and (max-width: 600px) {
+    .icon{
+        opacity: 1;
+    }
+    .menu{
+        display: none;
+    }
+    .logo{
+        width: 80%;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .profile{
+        width: 100%;
+        clear: both;
+    }
+    .profile img{
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+    .info{
+        width: 100%;
+        padding-left: 0px;
+        margin-bottom: 7rem;
+        clear: both;
+    }
+    .home h3{
+        font-size: 2rem;
+        line-height: 30px;
+    }
+}
+@media screen  and (max-width: 400px){
+    #photo-album a{
+        display: block;
+    }
+    #photo-album img{
+        width: 100%;
+    }
+}
